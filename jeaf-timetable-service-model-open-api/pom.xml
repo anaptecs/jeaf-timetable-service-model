@@ -18,5 +18,9 @@
 
 
 	<dependencies>
+		<dependency>
+			<groupId>com.anaptecs.jeaf.timetable</groupId>
+			<artifactId>jeaf-timetable-data-types-open-api</artifactId>
+		</dependency>
 	</dependencies>
 </project>

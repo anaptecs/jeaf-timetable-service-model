@@ -19,6 +19,10 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.anaptecs.jeaf.timetable</groupId>
+			<artifactId>jeaf-timetable-data-types-java</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>jakarta.annotation</groupId>
 			<artifactId>jakarta.annotation-api</artifactId>
 		</dependency>
@@ -29,10 +33,6 @@
 		<dependency>
 			<groupId>tools.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.anaptecs.jeaf.timetable</groupId>
-			<artifactId>jeaf-timetable-data-types-java</artifactId>
 		</dependency>
 	</dependencies>
 </project>
