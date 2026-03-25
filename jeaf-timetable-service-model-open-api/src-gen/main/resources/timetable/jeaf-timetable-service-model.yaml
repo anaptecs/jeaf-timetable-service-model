@@ -1,0 +1,16 @@
+openapi: 3.0.3
+
+info:
+  title: JEAF Timetable Data Types
+  version: 0.1.0-SNAPSHOT
+
+paths:
+  # OpenAPI standard requires to define at least 1 operation. This API however seems to be a pure type definition. 
+  # So we define NOP operation here as workaround.
+  /nop:
+    get:
+      operationId: noOperation
+      responses:
+        '200':
+          description: Nothing is the result of nop ;-)
+

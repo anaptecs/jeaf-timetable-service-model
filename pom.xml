@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.anaptecs.jeaf</groupId>
+		<artifactId>jeaf-generator-project-parent</artifactId>
+		<version>0.6.2-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.anaptecs.jeaf.timetable</groupId>
+	<artifactId>jeaf-timetable-service-model</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+	<name>JEAF Timetable Service Model</name>
+
+
+	<properties>
+		<!-- UML package which will be the one that is considered during code generation. -->
+		<umlPackage>com.anaptecs.jeaf.timetable.servicemodel</umlPackage>
+
+		<!-- Name of the main file of the UML model -->
+		<umlModelFile>JEAF_Timetable_Demo_API.uml</umlModelFile>
+		<my.modelArtifactGroupID>com.anaptecs.jeaf.timetable</my.modelArtifactGroupID>
+		<my.modelArtifactArtifactID>jeaf-timetable-uml-model-uml</my.modelArtifactArtifactID>
+		<my.modelArtifactXMIPath>xmi</my.modelArtifactXMIPath>
+
+	</properties>
+
+
+	<!-- "Extend" profiles from parent POM for usages of XMI files from local file system and Maven artifact usage. -->
+	<profiles>
+		<profile>
+			<id>RunCodeGenerationFromXMIFile</id>
+			<properties>
+				<!-- Read UML model (XMI files) directly from local file system -->
+				<xmiDirectory>${my.xmiDirectory}</xmiDirectory>
+			</properties>
+		</profile>
+		<profile>
+			<id>RunCodeGenerationFromModelArtifact</id>
+			<properties>
+				<!-- Read UML model from Maven artifact. -->
+				<modelArtifactGroupID>${my.modelArtifactGroupID}</modelArtifactGroupID>
+				<modelArtifactArtifactID>${my.modelArtifactArtifactID}</modelArtifactArtifactID>
+				<modelArtifactXMIPath>${my.modelArtifactXMIPath}</modelArtifactXMIPath>
+			</properties>
+		</profile>
+		<profile>
+			<id>UpdateMavenProjectStructureFromXMIFile</id>
+			<properties>
+				<!-- Read UML model (XMI files) directly from local file system -->
+				<xmiDirectory>${my.xmiDirectory}</xmiDirectory>
+			</properties>
+		</profile>
+		<profile>
+			<id>UpdateMavenProjectStructureFromModelArtifact</id>
+			<properties>
+				<!-- Read UML model from Maven artifact. -->
+				<modelArtifactGroupID>${my.modelArtifactGroupID}</modelArtifactGroupID>
+				<modelArtifactArtifactID>${my.modelArtifactArtifactID}</modelArtifactArtifactID>
+				<modelArtifactXMIPath>${my.modelArtifactXMIPath}</modelArtifactXMIPath>
+			</properties>
+		</profile>
+	</profiles>
+
+
+	<modules>
+		<module>jeaf-timetable-service-model-bom</module>
+		<module>jeaf-timetable-service-model-uml</module>
+		<module>jeaf-timetable-service-model-open-api</module>
+		<module>jeaf-timetable-service-model-java</module>
+		<module>jeaf-timetable-service-model-java-runtime</module>
+		<module>jeaf-timetable-service-model-services</module>
+		<module>jeaf-timetable-service-model-rest-client</module>
+		<module>jeaf-timetable-service-model-rest-client-starter</module>
+		<module>jeaf-timetable-service-model-rest-controller</module>
+		<module>jeaf-timetable-service-model-rest-controller-starter</module>
+		<module>jeaf-timetable-service-model-integration-test</module>
+	</modules>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-uml</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-open-api</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-java</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-java-runtime</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-services</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-rest-client</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-rest-client-starter</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-rest-controller</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-service-model-rest-controller-starter</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.anaptecs.jeaf.timetable</groupId>
+				<artifactId>jeaf-timetable-data-types-bom</artifactId>
+				<version>0.1.0-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.anaptecs.jeaf.timetable</groupId>
+			<artifactId>jeaf-timetable-uml-model-uml</artifactId>
+			<version>0.1.0-SNAPSHOT</version>
+			<type>zip</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
