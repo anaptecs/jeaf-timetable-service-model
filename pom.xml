@@ -46,6 +46,9 @@
 		<my.modelArtifactGroupID>com.anaptecs.jeaf.timetable</my.modelArtifactGroupID>
 		<my.modelArtifactArtifactID>jeaf-timetable-uml-model-uml</my.modelArtifactArtifactID>
 		<my.modelArtifactXMIPath>xmi</my.modelArtifactXMIPath>
+		
+		<generateReleaseNotes>true</generateReleaseNotes>
+		<mavenRepoBaseURL>https://repo1.maven.org/maven2</mavenRepoBaseURL>
 		<!-- PROTECTED REGION END -->
 
 		<!-- Version property for dependency to com.anaptecs.jeaf.timetable:jeaf-timetable-data-types -->
