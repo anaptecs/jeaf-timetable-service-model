@@ -38,13 +38,14 @@
 			Property only needs to be set in case that you want read XMI files from local file system
 		-->
 		<my.xmiDirectory></my.xmiDirectory>
+
 		
 		<!--
 			Properties are use to specify the Maven artifact from which the XMI files should be read.
 			Properties only need to be set in case that you want read XMI files from a Maven artifact.
 		-->
 		<my.modelArtifactGroupID>com.anaptecs.jeaf.timetable</my.modelArtifactGroupID>
-		<my.modelArtifactArtifactID>jeaf-timetable-uml-model-uml</my.modelArtifactArtifactID>
+		<my.modelArtifactArtifactID>jeaf-timetable-uml-model-xmi</my.modelArtifactArtifactID>
 		<my.modelArtifactXMIPath>xmi</my.modelArtifactXMIPath>
 		
 		<generateReleaseNotes>true</generateReleaseNotes>
@@ -55,7 +56,7 @@
 		<jeaf-timetable-data-types.version>0.1.0-SNAPSHOT</jeaf-timetable-data-types.version>
 
 		<!-- Version property for dependency to com.anaptecs.jeaf.timetable:jeaf-timetable-uml-model-uml -->
-		<jeaf-timetable-uml-model-uml.version>0.1.0-SNAPSHOT</jeaf-timetable-uml-model-uml.version>
+		<jeaf-timetable-uml-model-xmi.version>0.1.0-SNAPSHOT</jeaf-timetable-uml-model-xmi.version>
 
 	</properties>
 
@@ -173,8 +174,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.anaptecs.jeaf.timetable</groupId>
-			<artifactId>jeaf-timetable-uml-model-uml</artifactId>
-			<version>${jeaf-timetable-uml-model-uml.version}</version>
+			<artifactId>jeaf-timetable-uml-model-xmi</artifactId>
+			<version>${jeaf-timetable-uml-model-xmi.version}</version>
 			<type>zip</type>
 			<scope>provided</scope>
 		</dependency>
